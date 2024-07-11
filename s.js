@@ -1,4 +1,3 @@
-
 function maskPassword(pass){
     let str = ""
     for (let index = 0; index < pass.length; index++) {
@@ -9,16 +8,13 @@ function maskPassword(pass){
 
 function copyText(txt) {
     navigator.clipboard.writeText(txt).then(
-        () => {
-          
+        () => { 
           document.getElementById("alert").style.display = "inline"
           setTimeout(() => {
             document.getElementById("alert").style.display = "none"
           }, 2000);
-
         },
         () => {
-          
           alert("Clipboard copying failed")
         },
       );
@@ -33,9 +29,7 @@ const deletePassword = (website)=>{
     localStorage.setItem("passwords", JSON.stringify(arrUpdated))
     alert(`Successfully deleted ${website}'s password`)
     showPasswords()
-
 }
-
 
 const showPasswords = () => {
     let tb = document.querySelector("table")
@@ -54,7 +48,6 @@ const showPasswords = () => {
         let str = ""
         for (let index = 0; index < arr.length; index++) {
             const element = arr[index];
-
             str += `<tr>
     <td>${element.website} <img onclick="copyText('${element.website}')" src="./copy.svg" alt="Copy Button" width="10" width="10" height="10">
     </td>
@@ -66,7 +59,6 @@ const showPasswords = () => {
         </tr>`
         }
         tb.innerHTML = tb.innerHTML + str
-
     }
     website.value = ""
     username.value = ""
