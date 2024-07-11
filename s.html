@@ -2,14 +2,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassX - Your Personal Password Manager</title>
     <link rel="stylesheet" href="s.css">
 </head>
-
 <body>
     <nav>
         <div class="logo">PassX</div>
@@ -31,31 +29,22 @@
                 <th>Password</th>
                 <th>Delete</th>
             </tr> 
- 
         </table>
 
         <h2>Add a Password</h2>
         <form action="/submit" method="post">
-
-    
             <label for="website">Website:</label>
             <input type="text" id="website" name="website" required>
             <br><br>
-
-            
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <br><br>
-
-            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br>
-        
             <button class="btn" type="submit">Submit</button>
         </form>
     </div>
     <script src="s.js"></script>
 </body>
-
 </html>
